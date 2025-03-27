@@ -2,13 +2,36 @@
 
 import cgi, os
 
+
+
 params=cgi.FieldStorage()
 
 ime=params.getvalue('ime')
+lozinka=params.getvalue('lozinka')
+lozinka2=params.getvalue('lozinka2')
 
 print("Content-Type: text/html\n")
 
-print('''
+if lozinka != lozinka2:
+    print('''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Greška</title>
+    </head>
+    <body>
+        <p style="color: red;">Lozinke se ne podudaraju! </p>
+        <br>
+        <a href="forma1.py">Vrati se na pocetnu formu</a>
+    </body>
+    </html>
+    ''')
+
+
+else:
+  print('''
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,9 +46,9 @@ print('''
       <input type="text" name="email" value="ime.prezime@gmail.com">
       Smjer:
       <select name="izbor2">
-        <option value="Baze podataka"> Ekonomija </option>
-        <option value="Programiranje"> IT </option>
-        <option value="Tehnicki"> Elektrotehnika </option>
+        <option value="Ekonomija"> Ekonomija </option>
+        <option value="IT"> IT </option>
+        <option value="Elektrotehnika"> Elektrotehnika </option>
       </select>
       <br>
       Zavrsni:
