@@ -25,6 +25,7 @@ if lozinka != lozinka2:
         <p style="color: red;">Lozinke se ne podudaraju! </p>
         <br>
         <a href="forma1.py">Vrati se na pocetnu formu</a>
+        <br>
     </body>
     </html>
     ''')

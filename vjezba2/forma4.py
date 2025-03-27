@@ -10,6 +10,16 @@ izbor2=params.getvalue('izbor2')
 zavrsni=params.getvalue('zavrsni')
 napomena=params.getvalue('napomena')
 
+if zavrsni=="Yes":
+  zavrsni="Da"
+else:
+  zavrsni="Ne"
+
+if napomena == None:
+  napomena="Nema napomene"
+
+  
+
 print("Content-Type: text/html\n")
 
 

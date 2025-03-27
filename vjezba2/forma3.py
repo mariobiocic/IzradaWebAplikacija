@@ -27,7 +27,7 @@ print('''
 </head>
 <body>
     <form action="forma4.py" method="post"> 
-      <input type="text" name="napomena" value="Upisi nesto">
+      <textarea name="napomena" placeholder="Upisi nesto"></textarea>
       <br>
       <input type="hidden" name="ime" value="{}">
       <input type="hidden" name="email" value="{}">
@@ -49,5 +49,7 @@ print('''
 '''.format(ime,email,izbor,izbor2,zavrsni))
 
 print(params)
+
+print(zavrsni)
 
 print(os.environ['REQUEST_METHOD'])
