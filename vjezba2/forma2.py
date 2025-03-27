@@ -1,4 +1,4 @@
-#!C:\Python27\python.exe
+#!C:\Users\mario\AppData\Local\Programs\Python\Python313\python.exe
 
 import cgi, os
 
